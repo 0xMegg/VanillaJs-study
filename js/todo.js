@@ -4,7 +4,7 @@ const toDoList = document.getElementById("todo-list");
 
 const todos = [];
 
-function saveToDos(){
+function saveToDos() {
   localStorage.setItem("todoList", JSON.stringify(todos));
 }
 
@@ -33,13 +33,5 @@ function handleToDoSubmit(event) {
   paintToDo(newTodo);
   saveToDos();
 }
-
-function printTodoList() {
-  for (i = 0; i < lastList.length; i++) {
-    paintToDo(lastList[i]);
-  }
-}
-
-printTodoList();
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
